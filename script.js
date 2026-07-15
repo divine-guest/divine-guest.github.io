@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
 :root {
@@ -12,6 +11,7 @@
     --bg: #f8f9fe;
     --text: #1a1a2e;
     --card: #ffffff;
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
 }
 
 html {
@@ -19,6 +19,7 @@ html {
 }
 
 body {
+    font-family: 'Inter', -apple-system, sans-serif;
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
@@ -31,17 +32,17 @@ body {
 }
 
 /* === ШАПКА === */
-header {
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
+.header {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
     padding: 16px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-header .container {
+.header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,40 +52,43 @@ header .container {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .logo-icon {
     font-size: 32px;
 }
 
-.logo h1 {
-    font-size: 24px;
+.logo-text {
     color: var(--primary);
 }
 
-nav {
+.nav {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 32px;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
     color: var(--text);
     font-weight: 500;
-    transition: 0.3s;
+    font-size: 16px;
+    transition: color 0.2s;
 }
 
-nav a:hover {
+.nav a:hover {
     color: var(--primary);
 }
 
 .btn-nav {
     background: var(--primary);
     color: #fff !important;
-    padding: 10px 25px;
+    padding: 10px 28px;
     border-radius: 30px;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
 }
 
 .btn-nav:hover {
@@ -92,7 +96,15 @@ nav a:hover {
     transform: scale(1.02);
 }
 
-/* === ГЛАВНЫЙ БАННЕР === */
+.burger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* === ГЛАВНЫЙ ЭКРАН === */
 .hero {
     padding: 80px 0 60px;
     background: linear-gradient(135deg, #f8f9fe 0%, #e8e9ff 100%);
@@ -105,28 +117,28 @@ nav a:hover {
     align-items: center;
 }
 
-.hero-text .badge {
+.badge {
     display: inline-block;
     background: var(--primary);
     color: #fff;
-    padding: 6px 16px;
+    padding: 6px 18px;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
-.hero-text h1 {
+.hero h1 {
     font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    line-height: 1.15;
+    margin-bottom: 16px;
 }
 
-.hero-text .highlight {
+.highlight {
     color: var(--primary);
 }
 
-.hero-text p {
+.hero-subtitle {
     font-size: 20px;
     color: #555;
     margin-bottom: 30px;
@@ -134,7 +146,7 @@ nav a:hover {
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
+    gap: 16px;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
@@ -142,30 +154,28 @@ nav a:hover {
 .btn-primary {
     background: var(--primary);
     color: #fff;
-    padding: 14px 35px;
+    padding: 14px 36px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
+    transition: background 0.2s, transform 0.1s;
     display: inline-block;
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
 }
 
 .btn-secondary {
     background: transparent;
     color: var(--text);
-    padding: 14px 35px;
+    padding: 14px 36px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
     border: 2px solid var(--primary);
-    transition: 0.3s;
-    display: inline-block;
+    transition: background 0.2s, color 0.2s;
 }
 
 .btn-secondary:hover {
@@ -180,10 +190,11 @@ nav a:hover {
     color: #555;
 }
 
+/* === ДЕМО-ЧАТ === */
 .demo-chat {
     background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     max-width: 400px;
     margin: 0 auto;
@@ -206,7 +217,7 @@ nav a:hover {
 .bot-msg {
     background: #f1f1f4;
     padding: 12px 16px;
-    border-radius: 15px 15px 15px 5px;
+    border-radius: 16px 16px 16px 4px;
     max-width: 85%;
     font-size: 14px;
 }
@@ -215,7 +226,7 @@ nav a:hover {
     background: var(--primary);
     color: #fff;
     padding: 12px 16px;
-    border-radius: 15px 15px 5px 15px;
+    border-radius: 16px 16px 4px 16px;
     max-width: 85%;
     align-self: flex-end;
     font-size: 14px;
@@ -227,42 +238,45 @@ nav a:hover {
     background: #fff;
 }
 
-.services h2, .portfolio h2, .about h2, .contact h2 {
+.services h2,
+.portfolio h2,
+.about h2,
+.contact h2 {
     font-size: 36px;
     text-align: center;
     margin-bottom: 8px;
 }
 
-.subtitle {
+.section-subtitle {
     text-align: center;
     color: #666;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
     font-size: 18px;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
 .service-card {
     background: var(--bg);
-    padding: 30px;
+    padding: 32px;
     border-radius: 20px;
-    transition: 0.3s;
+    transition: transform 0.2s, box-shadow 0.2s;
     border: 1px solid transparent;
 }
 
 .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
     border-color: var(--primary);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
 }
 
 .service-icon {
     font-size: 48px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .service-card h3 {
@@ -272,7 +286,7 @@ nav a:hover {
 
 .service-card p {
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .service-card ul {
@@ -291,7 +305,7 @@ nav a:hover {
     display: inline-block;
     background: var(--primary);
     color: #fff;
-    padding: 8px 20px;
+    padding: 8px 22px;
     border-radius: 20px;
     font-weight: 600;
     font-size: 16px;
@@ -305,21 +319,21 @@ nav a:hover {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
 .portfolio-item {
     background: #fff;
-    padding: 30px;
+    padding: 28px;
     border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-    transition: 0.3s;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .portfolio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
 }
 
 .portfolio-badge {
@@ -367,13 +381,6 @@ nav a:hover {
 }
 
 .about-text .badge {
-    display: inline-block;
-    background: var(--primary);
-    color: #fff;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
     margin-bottom: 16px;
 }
 
@@ -439,7 +446,7 @@ nav a:hover {
     border: 1px solid #ddd;
     border-radius: 12px;
     font-size: 16px;
-    transition: 0.3s;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .contact-form input:focus,
@@ -458,7 +465,7 @@ nav a:hover {
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.2s;
 }
 
 .contact-form button:hover {
@@ -498,7 +505,7 @@ footer p {
     font-size: 14px;
 }
 
-footer p:last-child {
+footer .footer-ai {
     margin-top: 6px;
     opacity: 0.5;
 }
@@ -531,13 +538,16 @@ footer p:last-child {
 }
 
 @media (max-width: 768px) {
-    nav {
+    .nav {
         display: none;
     }
-    .hero-text h1 {
+    .burger {
+        display: block;
+    }
+    .hero h1 {
         font-size: 32px;
     }
-    .services-grid, .portfolio-grid {
+    .services-grid,
+    .portfolio-grid {
         grid-template-columns: 1fr;
     }
-}
