@@ -1,0 +1,9 @@
+// === ФОРМА ===
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('✅ Заявка отправлена! Я свяжусь с вами в ближайшее время.');
+    this.reset();
+});
+
+console.log('🚀 AI Solutions | Внедрение ИИ в бизнес');
+console.log('📞 Свяжитесь со мной для консультации');
