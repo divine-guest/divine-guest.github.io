@@ -5,53 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Solutions — Внедрение ИИ в бизнес</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
 </head>
 <body>
 
+    <div class="cursor-glow" id="cursorGlow"></div>
+
     <header class="header">
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">🧠</span>
-                <span class="logo-text">AI Solutions</span>
-            </div>
+        <div class="container">
+            <div class="logo">🧠 AI Solutions</div>
             <nav class="nav">
                 <a href="#services">Услуги</a>
                 <a href="#cases">Кейсы</a>
-                <a href="#about">О нас</a>
                 <a href="#pricing">Цены</a>
-                <a href="#contact" class="btn-nav">Начать проект</a>
+                <a href="#contact" class="btn-glow">Начать проект</a>
             </nav>
-            <button class="burger" id="burger">☰</button>
         </div>
     </header>
 
     <section class="hero" id="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="badge">🔥 Лидер AI-внедрения 2026</span>
-                <h1>Внедряем <span class="highlight">Искусственный Интеллект</span> в бизнес</h1>
-                <p class="hero-subtitle">
-                    Telegram-боты, AI-агенты, чат-виджеты и голосовые ассистенты.<br />
-                    Автоматизируем продажи, поддержку и рутину. Результат — за 2 недели.
-                </p>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="badge">⚡ Топ-1 AI-внедрение 2026</div>
+                <h1>Твой <span class="neon">ИИ-агент</span> <br />на стероидах</h1>
+                <p>Мы не делаем ботов. Мы создаём цифровых сотрудников, которые работают за тебя 24/7 и приносят деньги.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn-primary">Бесплатная консультация</a>
-                    <a href="#cases" class="btn-secondary">Наши кейсы</a>
+                    <a href="#contact" class="btn-primary">Бесплатный аудит</a>
+                    <a href="#cases" class="btn-secondary">Смотреть кейсы →</a>
                 </div>
                 <div class="hero-stats">
                     <div><span>10+</span> проектов</div>
-                    <div><span>100%</span> окупаемость</div>
                     <div><span>4.9</span> ★ рейтинг</div>
+                    <div><span>100%</span> окупаемость</div>
                 </div>
             </div>
             <div class="hero-demo">
-                <div class="demo-chat">
-                    <div class="demo-chat-header">🤖 AI-ассистент</div>
-                    <div class="demo-chat-body">
-                        <p class="bot-msg">Здравствуйте! Я помогу вам с выбором решения. Задайте вопрос!</p>
-                        <p class="user-msg">Сколько стоит внедрение бота?</p>
-                        <p class="bot-msg">Стоимость от 20 000 ₽. Напишите, какая у вас задача, и я сделаю точный расчёт.</p>
+                <div class="glow-box">
+                    <div class="demo-chat">
+                        <div class="demo-header">🤖 AI-ассистент</div>
+                        <div class="demo-body">
+                            <p class="bot">Привет! Я помогу тебе с выбором решения. Задай вопрос.</p>
+                            <p class="user">Сколько стоит внедрение?</p>
+                            <p class="bot">От 20 000 ₽. Напиши задачу — сделаю расчёт.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,52 +56,32 @@
 
     <section class="services" id="services">
         <div class="container">
-            <h2>Что мы делаем</h2>
-            <p class="section-subtitle">Автоматизация, которая приносит прибыль</p>
+            <h2>Что мы умеем</h2>
+            <p class="sub">Это не просто услуги. Это твоя новая реальность.</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🤖</div>
+                    <div class="icon">🧠</div>
                     <h3>AI-агенты</h3>
-                    <p>Интеллектуальные ассистенты для обработки заявок, ответов на вопросы, работы с прайс-листами и CRM.</p>
-                    <ul>
-                        <li>✅ Работают 24/7</li>
-                        <li>✅ Знают ваш прайс</li>
-                        <li>✅ Интеграция с CRM</li>
-                    </ul>
-                    <span class="service-price">от 30 000 ₽</span>
+                    <p>Умные ассистенты с памятью, RAG и голосом. Работают с твоими документами и CRM.</p>
+                    <span class="price">от 30 000 ₽</span>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💬</div>
+                    <div class="icon">💬</div>
                     <h3>Telegram-боты</h3>
-                    <p>Продающие и поддерживающие боты для бизнеса. Встроенные платежи, кнопки, автоматические рассылки.</p>
-                    <ul>
-                        <li>✅ Готовые сценарии</li>
-                        <li>✅ Подключение к прайсам</li>
-                        <li>✅ CRM-интеграция</li>
-                    </ul>
-                    <span class="service-price">от 20 000 ₽</span>
+                    <p>Продающие боты, которые сами ведут клиента по воронке. С платежами и рассылками.</p>
+                    <span class="price">от 20 000 ₽</span>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🌐</div>
-                    <h3>Профессиональные сайты</h3>
-                    <p>Продающие лендинги, интернет-магазины, каталоги с встроенными AI-агентами. Современный дизайн, SEO, адаптация.</p>
-                    <ul>
-                        <li>✅ Встроенный ИИ-чат</li>
-                        <li>✅ Формы заявок</li>
-                        <li>✅ Бесплатный хостинг</li>
-                    </ul>
-                    <span class="service-price">от 25 000 ₽</span>
+                    <div class="icon">🌐</div>
+                    <h3>Сайты-убийцы</h3>
+                    <p>Не просто лендинги. Это продающие машины с AI-чатом, анимациями и конверсией.</p>
+                    <span class="price">от 25 000 ₽</span>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📞</div>
+                    <div class="icon">📞</div>
                     <h3>Голосовые агенты</h3>
-                    <p>Автоматический обзвон клиентов, поддержка, приём заказов по телефону с распознаванием речи.</p>
-                    <ul>
-                        <li>✅ 200+ обзвонов в день</li>
-                        <li>✅ Распознавание речи</li>
-                        <li>✅ Интеграция с CRM</li>
-                    </ul>
-                    <span class="service-price">от 40 000 ₽</span>
+                    <p>Обзвон, поддержка, приём заказов — полностью автономно. Твой голосовой отдел продаж.</p>
+                    <span class="price">от 40 000 ₽</span>
                 </div>
             </div>
         </div>
@@ -113,54 +89,26 @@
 
     <section class="cases" id="cases">
         <div class="container">
-            <h2>Реальные кейсы</h2>
-            <p class="section-subtitle">Примеры работ, которые принесли нашим клиентам деньги</p>
+            <h2>Кейсы</h2>
+            <p class="sub">Цифры, а не обещания</p>
             <div class="cases-grid">
-                <div class="case-item">
-                    <div class="case-image">🏗️</div>
-                    <h4>Бот для поставщика ЖБИ</h4>
-                    <p>Telegram-бот с AI-агентом для поиска цен в прайс-листе. Обрабатывает 70% заявок автоматически.</p>
-                    <span class="case-result">Результат: +40% конверсии</span>
+                <div class="case-card">
+                    <div class="case-icon">🏗️</div>
+                    <h4>Поставщик ЖБИ</h4>
+                    <p>Бот с AI-агентом для поиска цен в прайсе. Обрабатывает 70% заявок без менеджеров.</p>
+                    <span class="result">↑ 40% конверсии</span>
                 </div>
-                <div class="case-item">
-                    <div class="case-image">🛍️</div>
-                    <h4>AI-агент для интернет-магазина</h4>
-                    <p>Консультирует клиентов, подбирает товары, помогает с оформлением заказа.</p>
-                    <span class="case-result">Результат: сократили поддержку на 60%</span>
+                <div class="case-card">
+                    <div class="case-icon">🛍️</div>
+                    <h4>Интернет-магазин</h4>
+                    <p>AI-консультант, который подбирает товары и помогает с оформлением.</p>
+                    <span class="result">↓ 60% поддержки</span>
                 </div>
-                <div class="case-item">
-                    <div class="case-image">🏥</div>
-                    <h4>Голосовой агент для клиники</h4>
-                    <p>Автоматический обзвон пациентов, запись на приём, напоминания.</p>
-                    <span class="case-result">Результат: 200+ записей в день</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="container about-container">
-            <div class="about-text">
-                <span class="badge">О нас</span>
-                <h2>Почему выбирают AI Solutions</h2>
-                <p>
-                    Мы — команда разработчиков и AI-инженеров. С 2025 года внедряем искусственный интеллект в бизнес. 
-                    Помогаем предпринимателям автоматизировать продажи, поддержку и рутину, экономя до 80% времени сотрудников.
-                </p>
-                <ul>
-                    <li>✅ 10+ успешных проектов</li>
-                    <li>✅ Работаем под ключ</li>
-                    <li>✅ Поддержка 24/7</li>
-                    <li>✅ Гарантия результата</li>
-                </ul>
-                <a href="#contact" class="btn-primary">Связаться с нами</a>
-            </div>
-            <div class="about-image">
-                <div class="about-card">
-                    <p>🧠 <strong>AI-инженеры</strong></p>
-                    <p>💻 Python, JavaScript</p>
-                    <p>🤖 OpenAI, Ollama</p>
-                    <p>📦 Docker, VPS</p>
+                <div class="case-card">
+                    <div class="case-icon">🏥</div>
+                    <h4>Клиника</h4>
+                    <p>Голосовой агент записывает пациентов, напоминает о приёме.</p>
+                    <span class="result">200+ записей/день</span>
                 </div>
             </div>
         </div>
@@ -168,41 +116,41 @@
 
     <section class="pricing" id="pricing">
         <div class="container">
-            <h2>Стоимость</h2>
-            <p class="section-subtitle">Прозрачные цены на наши услуги</p>
+            <h2>Цены</h2>
+            <p class="sub">Прозрачно и без скрытых платежей</p>
             <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Базовый</h3>
-                    <p class="price">от 20 000 ₽</p>
+                <div class="plan">
+                    <h3>Старт</h3>
+                    <div class="price">20 000 ₽</div>
                     <ul>
                         <li>Telegram-бот</li>
                         <li>Базовая настройка</li>
-                        <li>Поддержка 1 месяц</li>
+                        <li>1 месяц поддержки</li>
                     </ul>
-                    <a href="#contact" class="btn-primary">Заказать</a>
+                    <a href="#contact" class="btn-plan">Заказать</a>
                 </div>
-                <div class="pricing-card popular">
-                    <span class="popular-badge">Самый популярный</span>
+                <div class="plan popular">
+                    <div class="pop-badge">🔥 Хит</div>
                     <h3>Бизнес</h3>
-                    <p class="price">от 50 000 ₽</p>
+                    <div class="price">50 000 ₽</div>
                     <ul>
-                        <li>AI-агент + Telegram-бот</li>
+                        <li>AI-агент + бот</li>
                         <li>Интеграция с CRM</li>
-                        <li>Поддержка 3 месяца</li>
-                        <li>SEO-оптимизация</li>
+                        <li>3 месяца поддержки</li>
+                        <li>SEO</li>
                     </ul>
-                    <a href="#contact" class="btn-primary">Заказать</a>
+                    <a href="#contact" class="btn-plan">Заказать</a>
                 </div>
-                <div class="pricing-card">
+                <div class="plan">
                     <h3>VIP</h3>
-                    <p class="price">от 150 000 ₽</p>
+                    <div class="price">150 000 ₽</div>
                     <ul>
                         <li>Всё включено</li>
                         <li>Мультиагентная система</li>
-                        <li>Поддержка 12 месяцев</li>
+                        <li>12 месяцев поддержки</li>
                         <li>Индивидуальный дизайн</li>
                     </ul>
-                    <a href="#contact" class="btn-primary">Заказать</a>
+                    <a href="#contact" class="btn-plan">Заказать</a>
                 </div>
             </div>
         </div>
@@ -210,21 +158,20 @@
 
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Начать проект</h2>
-            <p class="section-subtitle">Обсудим вашу задачу — бесплатно</p>
-            <div class="contact-wrapper">
-                <form id="contactForm" class="contact-form">
-                    <input type="text" placeholder="Ваше имя" required />
-                    <input type="tel" placeholder="Номер телефона" required />
+            <h2>Обсудить проект</h2>
+            <p class="sub">Оставь заявку — ответим за 15 минут</p>
+            <div class="contact-grid">
+                <form id="contactForm">
+                    <input type="text" placeholder="Имя" required />
+                    <input type="tel" placeholder="Телефон" required />
                     <input type="email" placeholder="Email" />
-                    <textarea placeholder="Опишите вашу задачу" rows="4"></textarea>
-                    <button type="submit">Отправить заявку</button>
+                    <textarea placeholder="Опиши задачу" rows="4"></textarea>
+                    <button type="submit">Отправить →</button>
                 </form>
-                <div class="contact-info">
+                <div class="contacts">
                     <p>📞 <a href="tel:+79001234567">+7 (900) 123-45-67</a></p>
                     <p>✉️ <a href="mailto:info@aisolutions.ru">info@aisolutions.ru</a></p>
-                    <p>📱 Telegram: <a href="https://t.me/your_username">@your_username</a></p>
-                    <p>⏰ Работаем по всей России</p>
+                    <p>📱 <a href="#">@your_username</a></p>
                 </div>
             </div>
         </div>
@@ -233,7 +180,7 @@
     <footer>
         <div class="container">
             <p>© 2026 AI Solutions — Внедрение ИИ в бизнес</p>
-            <p class="footer-ai">Сайт работает с ИИ-ассистентом 🧠</p>
+            <p class="small">Сайт работает на твоём ИИ-агенте 🧠</p>
         </div>
     </footer>
 
@@ -242,10 +189,10 @@
         ChatWidget.init({
             botUrl: "https://ваш-бот.onrender.com/webhook",
             title: "AI-ассистент",
-            subtitle: "Задайте вопрос о внедрении ИИ",
+            subtitle: "Задай вопрос о внедрении ИИ",
             primaryColor: "#6c63ff",
             position: "bottom-right",
-            welcomeMessage: "Здравствуйте! Могу я помочь вам с внедрением ИИ в ваш бизнес?"
+            welcomeMessage: "Привет! Чем могу помочь?"
         });
     </script>
     <script src="script.js"></script>
