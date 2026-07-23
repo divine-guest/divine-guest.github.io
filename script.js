@@ -1,18 +1,9 @@
-// === CURSOR GLOW ===
-const glow = document.getElementById('cursorGlow');
-document.addEventListener('mousemove', (e) => {
-    glow.style.left = e.clientX + 'px';
-    glow.style.top = e.clientY + 'px';
-});
-
-// === BURGER (если нужен) ===
-// добавить по желанию
-
-// === FORM ===
-document.getElementById('contactForm').addEventListener('submit', (e) => {
+// === ОБРАБОТКА ФОРМЫ ===
+document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('✅ Заявка принята! Мы свяжемся с вами.');
-    e.target.reset();
+    this.reset();
 });
 
-console.log('🔥 AI Solutions — КИСЛОТНЫЙ ПРОФИ');
+// === ПРИВЕТСТВИЕ В КОНСОЛИ ===
+console.log('🔥 AI Solutions — профессиональный сайт');
