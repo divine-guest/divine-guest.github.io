@@ -1,26 +1,18 @@
-document.getElementById('burger').addEventListener('click', function () {
-    const nav = document.querySelector('.nav');
-    if (nav.style.display === 'flex') {
-        nav.style.display = 'none';
-    } else {
-        nav.style.display = 'flex';
-        nav.style.flexDirection = 'column';
-        nav.style.position = 'absolute';
-        nav.style.top = '70px';
-        nav.style.left = '0';
-        nav.style.width = '100%';
-        nav.style.background = '#fff';
-        nav.style.padding = '20px';
-        nav.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
-        nav.style.gap = '16px';
-    }
+// === CURSOR GLOW ===
+const glow = document.getElementById('cursorGlow');
+document.addEventListener('mousemove', (e) => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
 });
 
-document.getElementById('contactForm').addEventListener('submit', function (e) {
+// === BURGER (если нужен) ===
+// добавить по желанию
+
+// === FORM ===
+document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('✅ Заявка отправлена! Мы свяжемся с вами.');
-    this.reset();
+    alert('✅ Заявка принята! Мы свяжемся с вами.');
+    e.target.reset();
 });
 
-console.log('🚀 AI Solutions — Внедрение ИИ в бизнес');
-console.log('📞 Свяжитесь с нами для консультации');
+console.log('🔥 AI Solutions — КИСЛОТНЫЙ ПРОФИ');
