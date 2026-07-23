@@ -6,10 +6,9 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #0b0b12;
-    color: #eaeef5;
+    background: #0a0a0f;
+    color: #fff;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 .container {
@@ -18,27 +17,15 @@ body {
     padding: 0 24px;
 }
 
-/* GLOW */
-.cursor-glow {
-    position: fixed;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(108, 99, 255, 0.07) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-}
-
 /* HEADER */
 .header {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     position: sticky;
     top: 0;
+    background: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(12px);
     z-index: 100;
-    background: rgba(11, 11, 18, 0.85);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(108, 99, 255, 0.15);
-    padding: 16px 0;
 }
 
 .header .container {
@@ -50,7 +37,8 @@ body {
 .logo {
     font-size: 24px;
     font-weight: 800;
-    letter-spacing: -0.5px;
+    text-decoration: none;
+    color: #fff;
 }
 
 .nav {
@@ -63,7 +51,6 @@ body {
     color: #b0b8c5;
     text-decoration: none;
     font-weight: 500;
-    font-size: 15px;
     transition: 0.2s;
 }
 
@@ -71,26 +58,23 @@ body {
     color: #fff;
 }
 
-.btn-glow {
-    background: linear-gradient(135deg, #6c63ff, #3b31d4);
-    color: #fff !important;
-    padding: 10px 28px;
+.btn-outline {
+    background: transparent;
+    border: 1px solid #6c63ff;
+    padding: 10px 24px;
     border-radius: 40px;
+    color: #6c63ff !important;
     font-weight: 600;
-    transition: 0.3s;
-    box-shadow: 0 0 30px rgba(108, 99, 255, 0.25);
 }
 
-.btn-glow:hover {
-    transform: scale(1.04);
-    box-shadow: 0 0 50px rgba(108, 99, 255, 0.4);
+.btn-outline:hover {
+    background: #6c63ff;
+    color: #fff !important;
 }
 
 /* HERO */
 .hero {
     padding: 80px 0 60px;
-    position: relative;
-    z-index: 1;
 }
 
 .hero-grid {
@@ -102,30 +86,31 @@ body {
 
 .badge {
     display: inline-block;
-    background: rgba(108, 99, 255, 0.15);
+    background: rgba(108, 99, 255, 0.12);
     color: #b7afff;
     padding: 6px 18px;
     border-radius: 40px;
     font-size: 13px;
     font-weight: 600;
-    border: 1px solid rgba(108, 99, 255, 0.2);
     margin-bottom: 20px;
+    border: 1px solid rgba(108, 99, 255, 0.15);
 }
 
 .hero h1 {
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 20px;
 }
 
-.neon {
-    color: #6c63ff;
-    text-shadow: 0 0 40px rgba(108, 99, 255, 0.3);
+.gradient-text {
+    background: linear-gradient(135deg, #6c63ff, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 18px;
     color: #a0a8b8;
     margin-bottom: 32px;
     max-width: 500px;
@@ -145,13 +130,15 @@ body {
     border-radius: 40px;
     font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 0 30px rgba(108, 99, 255, 0.25);
+    display: inline-block;
+    border: none;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 50px rgba(108, 99, 255, 0.4);
+    box-shadow: 0 0 30px rgba(108, 99, 255, 0.3);
 }
 
 .btn-secondary {
@@ -175,10 +162,10 @@ body {
 }
 
 .hero-stats span {
+    display: block;
     font-size: 28px;
     font-weight: 800;
     color: #fff;
-    display: block;
 }
 
 .hero-stats div {
@@ -187,24 +174,19 @@ body {
 }
 
 /* DEMO CHAT */
-.glow-box {
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 32px;
-    padding: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-}
-
 .demo-chat {
-    background: #11111a;
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
     overflow: hidden;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .demo-header {
-    background: rgba(108, 99, 255, 0.08);
     padding: 16px 20px;
     font-weight: 600;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .demo-body {
@@ -214,19 +196,19 @@ body {
     gap: 12px;
 }
 
-.bot, .user {
+.msg {
     padding: 12px 16px;
     border-radius: 16px;
     max-width: 85%;
     font-size: 14px;
 }
 
-.bot {
-    background: rgba(255, 255, 255, 0.05);
+.msg.bot {
+    background: rgba(255, 255, 255, 0.06);
     align-self: flex-start;
 }
 
-.user {
+.msg.user {
     background: #6c63ff;
     align-self: flex-end;
 }
@@ -241,13 +223,12 @@ body {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 800;
     text-align: center;
-    margin-bottom: 8px;
 }
 
-.sub {
+.subtitle {
     text-align: center;
     color: #8890a0;
     margin-bottom: 48px;
@@ -260,7 +241,7 @@ h2 {
     gap: 30px;
 }
 
-.service-card, .case-card, .plan {
+.service-card, .case-card, .plan-card {
     background: rgba(255, 255, 255, 0.02);
     padding: 32px;
     border-radius: 24px;
@@ -268,7 +249,7 @@ h2 {
     transition: 0.3s;
 }
 
-.service-card:hover, .case-card:hover, .plan:hover {
+.service-card:hover, .case-card:hover, .plan-card:hover {
     background: rgba(255, 255, 255, 0.04);
     border-color: rgba(108, 99, 255, 0.2);
     transform: translateY(-4px);
@@ -279,7 +260,7 @@ h2 {
     margin-bottom: 16px;
 }
 
-.service-card h3, .case-card h4, .plan h3 {
+.service-card h3, .case-card h4, .plan-card h3 {
     font-size: 22px;
     margin-bottom: 8px;
 }
@@ -304,16 +285,16 @@ h2 {
 }
 
 /* PRICING */
-.plan {
+.plan-card {
     text-align: center;
 }
 
-.popular {
+.plan-card.popular {
     border-color: #6c63ff;
     position: relative;
 }
 
-.pop-badge {
+.popular-badge {
     display: inline-block;
     background: #6c63ff;
     color: #fff;
@@ -324,18 +305,18 @@ h2 {
     margin-bottom: 12px;
 }
 
-.plan .price {
+.plan-card .price {
     font-size: 32px;
     margin: 16px 0;
 }
 
-.plan ul {
+.plan-card ul {
     list-style: none;
     padding: 0;
     margin-bottom: 24px;
 }
 
-.plan ul li {
+.plan-card ul li {
     padding: 6px 0;
     color: #b0b8c5;
     font-size: 14px;
@@ -365,16 +346,15 @@ h2 {
 
 .contact-grid {
     grid-template-columns: 1fr 1fr;
-    align-items: start;
 }
 
-.contact form {
+.contact-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.contact input, .contact textarea {
+.contact-form input, .contact-form textarea {
     padding: 14px 18px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -384,44 +364,37 @@ h2 {
     transition: 0.3s;
 }
 
-.contact input:focus, .contact textarea:focus {
+.contact-form input:focus, .contact-form textarea:focus {
     outline: none;
     border-color: #6c63ff;
     background: rgba(255, 255, 255, 0.06);
 }
 
-.contact button {
-    background: linear-gradient(135deg, #6c63ff, #3b31d4);
-    color: #fff;
-    padding: 16px;
-    border: none;
-    border-radius: 16px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
+.contact-form button {
+    width: 100%;
 }
 
-.contact button:hover {
-    transform: scale(1.02);
-}
-
-.contacts p {
+.contact-info p {
     font-size: 18px;
     padding: 8px 0;
 }
 
-.contacts a {
+.contact-info a {
     color: #b7afff;
     text-decoration: none;
 }
 
-.contacts a:hover {
+.contact-info a:hover {
     color: #fff;
 }
 
+.contact-info .note {
+    color: #8890a0;
+    font-size: 14px;
+}
+
 /* FOOTER */
-footer {
+.footer {
     border-top: 1px solid rgba(255, 255, 255, 0.04);
     padding: 30px 0;
     text-align: center;
@@ -429,17 +402,21 @@ footer {
     color: #555;
 }
 
-footer .small {
+.footer-ai {
     margin-top: 6px;
     opacity: 0.5;
 }
 
+/* АДАПТИВ */
 @media (max-width: 992px) {
     .hero-grid, .contact-grid {
         grid-template-columns: 1fr;
     }
     .hero h1 {
-        font-size: 40px;
+        font-size: 36px;
+    }
+    .hero p {
+        max-width: 100%;
     }
 }
 
@@ -448,6 +425,12 @@ footer .small {
         display: none;
     }
     .hero h1 {
-        font-size: 32px;
+        font-size: 28px;
+    }
+    .hero-stats {
+        gap: 20px;
+    }
+    .services-grid, .cases-grid, .pricing-grid {
+        grid-template-columns: 1fr;
     }
 }
