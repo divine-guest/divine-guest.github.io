@@ -1,4 +1,3 @@
-/* === ОБЩИЕ === */
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +30,7 @@ body {
     padding: 0 20px;
 }
 
-/* === ШАПКА === */
+/* Header */
 .header {
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(12px);
@@ -42,7 +41,7 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.header .container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -104,13 +103,13 @@ body {
     cursor: pointer;
 }
 
-/* === ГЛАВНЫЙ ЭКРАН === */
+/* Hero */
 .hero {
     padding: 80px 0 60px;
     background: linear-gradient(135deg, #f8f9fe 0%, #e8e9ff 100%);
 }
 
-.hero .container {
+.hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -160,6 +159,8 @@ body {
     font-weight: 600;
     transition: background 0.2s, transform 0.1s;
     display: inline-block;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -190,7 +191,14 @@ body {
     color: #555;
 }
 
-/* === ДЕМО-ЧАТ === */
+.hero-stats span {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--text);
+    display: block;
+}
+
+/* Demo chat */
 .demo-chat {
     background: #fff;
     border-radius: 24px;
@@ -232,15 +240,16 @@ body {
     font-size: 14px;
 }
 
-/* === УСЛУГИ === */
+/* Services */
 .services {
     padding: 80px 0;
     background: #fff;
 }
 
 .services h2,
-.portfolio h2,
+.cases h2,
 .about h2,
+.pricing h2,
 .contact h2 {
     font-size: 36px;
     text-align: center;
@@ -311,19 +320,19 @@ body {
     font-size: 16px;
 }
 
-/* === ПОРТФОЛИО === */
-.portfolio {
+/* Cases */
+.cases {
     padding: 80px 0;
     background: var(--bg);
 }
 
-.portfolio-grid {
+.cases-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-.portfolio-item {
+.case-item {
     background: #fff;
     padding: 28px;
     border-radius: 20px;
@@ -331,34 +340,28 @@ body {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.portfolio-item:hover {
+.case-item:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow);
 }
 
-.portfolio-badge {
-    display: inline-block;
-    background: var(--primary);
-    color: #fff;
-    padding: 4px 14px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: 600;
+.case-image {
+    font-size: 48px;
     margin-bottom: 12px;
 }
 
-.portfolio-item h4 {
+.case-item h4 {
     font-size: 20px;
     margin-bottom: 8px;
 }
 
-.portfolio-item p {
+.case-item p {
     color: #555;
     font-size: 15px;
     margin-bottom: 12px;
 }
 
-.portfolio-result {
+.case-result {
     display: block;
     background: #f1f3f5;
     padding: 10px 14px;
@@ -367,13 +370,13 @@ body {
     color: var(--text);
 }
 
-/* === ОБО МНЕ === */
+/* About */
 .about {
     padding: 80px 0;
     background: #fff;
 }
 
-.about-content {
+.about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -420,7 +423,78 @@ body {
     padding: 8px 0;
 }
 
-/* === КОНТАКТЫ === */
+/* Pricing */
+.pricing {
+    padding: 80px 0;
+    background: var(--bg);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.pricing-card {
+    background: #fff;
+    padding: 32px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.pricing-card.popular {
+    border: 2px solid var(--primary);
+    position: relative;
+}
+
+.popular-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    padding: 4px 16px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.pricing-card .price {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-card ul li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.pricing-card .btn-primary {
+    width: 100%;
+    text-align: center;
+}
+
+/* Contact */
 .contact {
     padding: 80px 0;
     background: linear-gradient(135deg, var(--bg) 0%, #e8e9ff 100%);
@@ -492,7 +566,7 @@ body {
     text-decoration: underline;
 }
 
-/* === ПОДВАЛ === */
+/* Footer */
 footer {
     background: var(--text);
     color: #fff;
@@ -510,9 +584,9 @@ footer .footer-ai {
     opacity: 0.5;
 }
 
-/* === АДАПТИВ === */
+/* Adaptive */
 @media (max-width: 992px) {
-    .hero .container {
+    .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
     }
@@ -522,7 +596,7 @@ footer .footer-ai {
     .hero-buttons {
         justify-content: center;
     }
-    .about-content {
+    .about-container {
         grid-template-columns: 1fr;
         text-align: center;
     }
@@ -548,7 +622,8 @@ footer .footer-ai {
         font-size: 32px;
     }
     .services-grid,
-    .portfolio-grid {
+    .cases-grid,
+    .pricing-grid {
         grid-template-columns: 1fr;
     }
 }
