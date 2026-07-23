@@ -1,4 +1,3 @@
-// === БУРГЕР-МЕНЮ ===
 document.getElementById('burger').addEventListener('click', function () {
     const nav = document.querySelector('.nav');
     if (nav.style.display === 'flex') {
@@ -17,12 +16,11 @@ document.getElementById('burger').addEventListener('click', function () {
     }
 });
 
-// === ФОРМА ===
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
-    alert('✅ Заявка отправлена! Я свяжусь с вами в ближайшее время.');
+    alert('✅ Заявка отправлена! Мы свяжемся с вами.');
     this.reset();
 });
 
-console.log('🚀 AI Solutions | Внедрение ИИ в бизнес');
-console.log('📞 Свяжитесь со мной для консультации');
+console.log('🚀 AI Solutions — Внедрение ИИ в бизнес');
+console.log('📞 Свяжитесь с нами для консультации');
